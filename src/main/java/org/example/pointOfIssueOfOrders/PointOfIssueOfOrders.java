@@ -20,13 +20,10 @@ public class PointOfIssueOfOrders {
         this.shop = shop;
     }
 
-    //Принять доставленный заказ
     public void addSupply(Supply supply) {
         listOfSupply.add(supply);
     }
 
-
-    //Отдать заказ
     public void getSupply(int trackCode) {
         Scanner scanner = new Scanner(System.in);
 
@@ -42,29 +39,21 @@ public class PointOfIssueOfOrders {
                 String scanChar = scanner.nextLine();
 
                 if (scanChar.charAt(0) == 'y') {
-
                     // Удалить товары
                 }
                 if (scanChar.charAt(0) == 'n') {
-
-                    // Добавить товары в кучу возврата
                     listOfReturnOder.add(product);
-
                 }
             }
             listOfSupply.remove(showSupply);
         }
     }
 
-    //Возрат заказа
     public void returnOderToStok() {
         shop.delivery.sendCargoToStock(listOfReturnOder);
     }
 
     public String getAddressOfPIO() {
-
         return addressOfPIO;
     }
-
-
 }

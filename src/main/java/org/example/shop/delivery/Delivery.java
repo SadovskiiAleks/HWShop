@@ -28,7 +28,6 @@ public class Delivery {
         listOfSupply.add(supply);
     }
 
-    //отправить посылку
     public void sendCargoToPIO() {
         String addresToPIO = listOfSupply.get(0).getAddressOfPIO();
 
@@ -41,17 +40,14 @@ public class Delivery {
         listOfSupply.remove(0);
     }
 
-    //вернуть посылку
     public void sendCargoToStock(List<UnitOfBasket> listOfReturnOder) {
         for (UnitOfBasket oderReturn : listOfReturnOder) {
-            // Найти склад товара
             String cityOfStockOder = oderReturn.getCity();
             Stock stockOfOder = shop.getListOfStock().stream()
                     .filter(x -> (x.getCity().equals(cityOfStockOder)))
                     .findFirst()
                     .orElse(null);
 
-            //Положить товар на склад
             Product product = oderReturn.getProduct();
             int quantity = oderReturn.getQuantity();
 
@@ -60,9 +56,6 @@ public class Delivery {
                     .findFirst()
                     .orElse(null);
             quantityInStock.setQuantity(quantity);
-
         }
     }
-
-
 }

@@ -22,7 +22,6 @@ public class Stock {
         this.quantityInStock.add(new QuantityInStock(product, quantity));
     }
 
-
     public String getCity() {
         return city;
     }

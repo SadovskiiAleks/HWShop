@@ -27,7 +27,6 @@ public class UserInterface {
         this.userName = userName;
     }
 
-    // Выбрать пункт выдачи заказов из магазина
     public void setAddressOfPIO() {
         //Показать ПВЗ
         shop.getListOfPIO().stream()
@@ -53,28 +52,24 @@ public class UserInterface {
 
     }
 
-    //показать все товары
     public void showProduct() {
         shop.getlistOfProduct().stream()
                 .forEach(x -> System.out.println(x.getInfo()));
 
     }
 
-    //показать только товары ключевым словам
     public void showProduct(String keyword) {
         shop.getlistOfProduct().stream()
                 .filter(x -> (x.getInfo().contains(keyword) == true))
                 .forEach(x -> System.out.println(x.getInfo()));
     }
 
-    //показать только товары по ценам
     public void showProduct(int cost) {
         shop.getlistOfProduct().stream()
                 .filter(x -> (x.getCost() >= cost))
                 .forEach(x -> System.out.println(x.getInfo()));
     }
 
-    //показать только товары по производителю
     public void showProduct(Manufacturer manufacturer) {
         shop.getlistOfProduct().stream()
                 .filter(x -> (x.getManufacturer() == manufacturer))
@@ -91,8 +86,6 @@ public class UserInterface {
                 .orElse(null);
     }
 
-
-    //Добавить товар в корзину
     public void addBasket(Product product, int quantity) {
         //Проверить склады на количество данного товара
         if (findInStock(product, quantity, Command.FIND) == true) {
@@ -103,26 +96,21 @@ public class UserInterface {
         }
     }
 
-    //Внести оплату
     public void order() {
         Product[] arrayOfProduct = new Product[numberOfRecommendations];
-        //Проверить заполнен ли адрес
         if (addressOfPIO != null) {
-            //создать новый заказ на доставку
             shop.delivery.addNewSupply(listOfBasket, userName, addressOfPIO);
 
-            //Показать рекомендуемые товары
             int i = 0;
             while (i == numberOfRecommendations) {
-                // Получить первый тип продукта из корзины
+
                 for (UnitOfBasket unit : listOfBasket) {
-                    // Пройтись по списку продуктов в магазине и найти его рейтинг
                     List<Product> newListProduct = shop.getlistOfProduct().stream()
                             .filter(x -> (x.getCategory() == unit.getProduct().getCategory()))
                             .filter(x -> (x.getOverallRating() > 4))
                             .toList();
                     int x = 2;
-                    // добавить 2 товара с рейтингом максимальным рейтингом
+
                     for (Product product : newListProduct) {
                         if (x == 0) {
                             break;
@@ -131,8 +119,6 @@ public class UserInterface {
                         x--;
                         i++;
                     }
-
-                    // пройтись по следующему товару
                 }
             }
             listOfBasket = null;

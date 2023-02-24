@@ -12,17 +12,14 @@ public class ManagerOfSystem {
         this.nameOfManager = nameOfManager;
     }
 
-    //создать новый тип товара
     public void addPosition(Shop shop, Product product) {
         shop.addProduct(product);
     }
 
-    //добавить товар на склад
     public void addToStock(Stock stock, Product product, int quantity) {
         stock.addProduct(product, quantity);
     }
 
-    // создать позицию и добавить товар
     public void addPositionAndStock(Shop shop, Stock stock, Product product, int quantity) {
         //проверка наличия юнита
 
