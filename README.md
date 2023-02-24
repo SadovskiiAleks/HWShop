@@ -7,20 +7,15 @@
 
 ## Ссылки на применение каждого этого принципа
 1. Магические чисела
-   * [Ссылка] (https://github.com/SadovskiiAleks/HWShop/blob/2ca4f5c238d22f2326eced3ccc9a9d6c7b9a7809/src/main/java/org/example/userInterface/UserInterface.java#L17)
+   * [Ссылка](https://github.com/SadovskiiAleks/HWShop/blob/2ca4f5c238d22f2326eced3ccc9a9d6c7b9a7809/src/main/java/org/example/userInterface/UserInterface.java#L17)
 2. DRY
-   * https://github.com/SadovskiiAleks/HWShop/blob/2ca4f5c238d22f2326eced3ccc9a9d6c7b9a7809/src/main/java/org/example/userInterface/UserInterface.java#L144
+   * [Ссылка](https://github.com/SadovskiiAleks/HWShop/blob/2ca4f5c238d22f2326eced3ccc9a9d6c7b9a7809/src/main/java/org/example/userInterface/UserInterface.java#L144)
 3. SOLID
-   * [S - принцип единственной ответственности(Single Responsibility Principle)]
-     (https://github.com/SadovskiiAleks/HWShop/blob/2ca4f5c238d22f2326eced3ccc9a9d6c7b9a7809/src/main/java/org/example/shop/delivery/Delivery.java#L14)
-   * [O - принцип открытости/закрытости(Open Closed Principle)]
-     (https://github.com/SadovskiiAleks/HWShop/blob/2ca4f5c238d22f2326eced3ccc9a9d6c7b9a7809/src/main/java/org/example/managerOfSystem/product/perents/Product.java#L5)
-   * [L-принцип замены Барбары Лисков(Liskov Substitution Principle)]
-     (https://github.com/SadovskiiAleks/HWShop/blob/2ca4f5c238d22f2326eced3ccc9a9d6c7b9a7809/src/main/java/org/example/shop/Shop.java#L11)
-   * [I- принцип сегрегации (разделения) интерфейса(Interface Segregation Principle)]
-   
-   * [D- принцип инверсии зависимостей(Dependency Inversion Principle)]
-     (https://github.com/SadovskiiAleks/HWShop/blob/2ca4f5c238d22f2326eced3ccc9a9d6c7b9a7809/src/main/java/org/example/managerOfSystem/product/Electronics.java#L19)
+   * [S - принцип единственной ответственности(Single Responsibility Principle)](https://github.com/SadovskiiAleks/HWShop/blob/2ca4f5c238d22f2326eced3ccc9a9d6c7b9a7809/src/main/java/org/example/shop/delivery/Delivery.java#L14)
+   * [O - принцип открытости/закрытости(Open Closed Principle)](https://github.com/SadovskiiAleks/HWShop/blob/2ca4f5c238d22f2326eced3ccc9a9d6c7b9a7809/src/main/java/org/example/managerOfSystem/product/perents/Product.java#L5)
+   * [L-принцип замены Барбары Лисков(Liskov Substitution Principle)](https://github.com/SadovskiiAleks/HWShop/blob/2ca4f5c238d22f2326eced3ccc9a9d6c7b9a7809/src/main/java/org/example/shop/Shop.java#L11)
+   * [I- принцип сегрегации (разделения) интерфейса(Interface Segregation Principle)]  
+   * [D- принцип инверсии зависимостей(Dependency Inversion Principle)](https://github.com/SadovskiiAleks/HWShop/blob/2ca4f5c238d22f2326eced3ccc9a9d6c7b9a7809/src/main/java/org/example/managerOfSystem/product/Electronics.java#L19)
 ## Описание решения
 
 
