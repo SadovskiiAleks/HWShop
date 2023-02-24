@@ -2,7 +2,8 @@ package org.example.managerOfSystem.product.perents;
 
 import java.util.LinkedList;
 
-
+//O - принцип открытости/закрытости(Open Closed Principle)
+// Тут не расчетный класс, но он открыт для модификации у наследников
 public abstract class Product {
 
     protected Manufacturer manufacturer;

@@ -141,6 +141,7 @@ public class UserInterface {
         }
     }
 
+    //Метод DRY
     private boolean findInStock(Product product, int quantity, Command command) {
         for (Stock stock : shop.getListOfStock()) {
             for (QuantityInStock quantityInStock : stock.getListProductInStock()) {

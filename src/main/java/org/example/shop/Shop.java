@@ -8,6 +8,8 @@ import org.example.stock.Stock;
 import java.util.ArrayList;
 import java.util.List;
 
+//L-принцип замены Барбары Лисков(Liskov Substitution Principle)
+//Тут можно было накатить наследников ДОСТАВКА, СКЛАД и т.д., но лучше пусть каждый занимаеться своим делом )
 public class Shop {
 
     final String name;

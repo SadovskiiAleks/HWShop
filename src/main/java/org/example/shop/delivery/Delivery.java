@@ -11,6 +11,8 @@ import org.example.userInterface.UnitOfBasket;
 import java.util.ArrayList;
 import java.util.List;
 
+//S - принцип единственной ответственности(Single Responsibility Principle)
+// Служба доставки как отдельный класс со своими методами не включенными в интерфейс пользователя
 public class Delivery {
 
     private List<Supply> listOfSupply = new ArrayList<>();
